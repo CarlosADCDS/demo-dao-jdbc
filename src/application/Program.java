@@ -45,9 +45,17 @@ public class Program {
 			}
 			break;
 		}
+		case 3: {
+			System.out.println("\n=== TEST 3: seller findAll ===");
+			List<Seller> list = sellerDao.findAll();
+			for (Seller obj : list) {
+				System.out.println(obj);
+			}
+			break;
+		}
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + opcao);
-		}
+		}		
 	}
 
 }
