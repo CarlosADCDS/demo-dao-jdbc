@@ -70,6 +70,15 @@ public class Program {
 			sellerDao.update(seller);
 			System.out.println("Update completed");
 			break;
+		}
+		case 6: {
+			System.out.println("\n=== TEST 6: seller deleteById ===");
+			System.out.println("Enter id for deletion: ");
+			int id = sc.nextInt();
+			sellerDao.deleteById(id);
+			System.out.println("Deletion completed");
+			sc.close();
+			break;
 		}	
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + opcao);
